@@ -1,0 +1,26 @@
+{
+  "name": "gauth-web-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd frontend && npm start",
+    "backend": "cd backend && go run cmd/server/main.go",
+    "test": "cd frontend && npm test && cd ../backend && go test ./...",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "setup": "npm run setup:frontend && npm run setup:backend",
+    "setup:frontend": "cd frontend && npm install",
+    "setup:backend": "cd backend && go mod download"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mauriciomferz/Gauth_web_app_001.git"
+  },
+  "keywords": ["gauth", "authentication", "authorization", "web-app", "go", "react", "nextjs"],
+  "author": "Mauricio Fernandez",
+  "license": "MIT"
+}
